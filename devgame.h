@@ -101,12 +101,43 @@ adrRelasi deleteLastRelasi(listRelasi &LR);
 adrRelasi searchRelasi(listDev LD, adrRelasi &prevRelasi, infotypeDev xDev, infotypeGame xGame);
 void connectGameinDev(listDev &LD, listGame &LG, string ID_Studio, string ID_Game);
 adrRelasi disconnectGameinDev(listDev &LD, string ID_Studio, string ID_Game);
-adrDev deleteDeveloper(listDev &LD, string ID_Studio);
-adrGame deleteGame(listDev &LD, listGame &LG, string ID_Game);
+
+adrDev deleteDeveloper(listDev &LD, string &ID_Studio);
+adrGame deleteGame(listDev &LD, listGame &LG, string &ID_Game);
 
 void printDevBasedGame(listDev LD, string ID_Game);
 void printGameBasedDev(listDev LD, string ID_Studio);
+
+void printGameBasedGenre(listDev LD, string genre);
+void printGameByGenre(listDev LD, string genre);
+void printGameByGenre2(listDev LD, listGame LG, string genre);
+
+void printGameBasedPlatform(listDev LD, string platform);
+void printGameByPlatform(listDev LD, string platform);
+void printGameByPlatform2(listDev LD, listGame LG, string platform);
+
+adrGame printHighestRatingGame(listGame LG);
+adrGame printGameWithMostUser(listGame LG);
+
+// Menu
+void menu(listDev &LD, listGame &LG);
+void ListDeveloperMenu(listDev &LD);
+void ListGameMenu(listDev LD, listGame &LG);
+void listRelasiMenu(listDev LD, listGame LG);
+
+void inputListDev(listDev &LD);
+void showListDev(listDev LD);
+
+void inputListGame(listGame &LG);
+void showListGame(listGame LG);
+
+void connect(listDev LD, listGame LG);
+void disconnect(listDev LD, listGame LG);
+void showRelasiDevGame(listDev LD);
+
+void showDevByGame(listDev LD, listGame LG);
+void showGamebyDev(listDev LD, listGame LG);
+
 void printRelasi(listDev LD);
-void printRelasi2(listDev LD);
 
 #endif // DEVGAME_H_INCLUDED
